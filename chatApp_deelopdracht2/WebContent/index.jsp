@@ -15,6 +15,13 @@
             <jsp:param name="title" value="Home" />
         </jsp:include>
 
+        <script type="text/javascript" src="js/status.js"></script>
+
+        <jsp:include page="footer.jsp">
+            <jsp:param name="title" value="Home" />
+        </jsp:include>
+
+
         <main>
             <c:if test="${errors.size()>0 }">
                 <div class="danger">
@@ -28,8 +35,6 @@
             <c:choose>
                 <c:when test="${user!=null}">
                     <p>Welcome ${user.getFirstName()}!</p>
-
-                    <jsp:include page="blog.jsp">
 
                     <form method="post" action="Controller?action=LogOut">
                         <p>
@@ -52,14 +57,11 @@
                         </p>
                     </form>
                 </c:otherwise>
+
+
             </c:choose>
+
+            <jsp:include page="blog.jspf" />
         </main>
-
-        <jsp:include page="footer.jsp">
-            <jsp:param name="title" value="Home" />
-        </jsp:include>
-
-
-        <script type="text/javascript" src="js/status.js"></script>
     </body>
 </html>

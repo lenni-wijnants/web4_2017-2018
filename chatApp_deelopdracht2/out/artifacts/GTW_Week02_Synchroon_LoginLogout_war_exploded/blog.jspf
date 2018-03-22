@@ -1,0 +1,106 @@
+<h2>Blog</h2>
+
+<ul id="blog">
+
+    <li>
+        <p>Gaan we weer naar Devoxx volgend jaar?</p>
+        <ul id="blog1comments">
+
+            <li class="comment">
+                <p class="naam">Lenni: </p>
+                <p class="bericht">Uiteraard!</p>
+                <p class="rating">10/10</p>
+            </li>
+
+            <li class="comment">
+                <p class="naam">Grinch: </p>
+                <p class="bericht">Nooit van mijn leven, spanjaard.</p>
+                <p class="rating">0/10</p>
+            </li>
+        </ul>
+
+        <form id="form1">
+            <label>Naam: </label>
+            <input type="text" name="naam"/>
+
+            <label>Rating: </label>
+            <input type="text" name="rating"/>
+
+            <label>Bericht: </label>
+            <input type="text" name="bericht"/>
+
+            <input type="submit" value="Send" />
+
+        </form>
+    </li>
+
+    <li>
+        <p>Wat weten jullie van Golang?</p>
+        <ul id="blog2comments"></ul>
+        <form id="form2">
+            <label>Naam: </label>
+            <input type="text" name="naam"/>
+
+            <label>Rating: </label>
+            <input type="text" name="rating"/>
+
+            <label>Bericht: </label>
+            <input type="text" name="bericht"/>
+
+            <input type="submit" value="Send" />
+        </form>
+    </li>
+
+    <li>
+        <p>Hoe pak je het best async push aan?</p>
+        <ul id="blog3comments"></ul>
+        <form id="form3">
+            <label>Naam: </label>
+            <input type="text" name="naam"/>
+
+            <label>Rating: </label>
+            <input type="text" name="rating"/>
+
+            <label>Bericht: </label>
+            <input type="text" name="bericht"/>
+
+            <input type="submit" value="Send" />
+        </form>
+    </li>
+
+    <li>
+        <p>Waar gaan jullie het liefst op reis?</p>
+        <ul id="blog4comments"></ul>
+        <form id="form4">
+            <label>Naam: </label>
+            <input type="text" name="naam"/>
+
+            <label>Rating: </label>
+            <input type="text" name="rating"/>
+
+            <label>Bericht: </label>
+            <input type="text" name="bericht"/>
+
+            <input type="submit" value="Send" />
+        </form>
+    </li>
+
+    <li>
+        <p>Wat vinden jullie van de controverse rond FaceBook?</p>
+        <ul id="blog5comments"></ul>
+        <form id="form5">
+            <label>Naam: </label>
+            <input type="text" name="naam"/>
+
+            <label>Rating: </label>
+            <input type="text" name="rating"/>
+
+            <label>Bericht: </label>
+            <input type="text" name="bericht"/>
+
+            <input type="submit" value="Send" />
+        </form>
+    </li>
+</ul>
+
+<script type="text/javascript" src="js/blog.js"></script>
