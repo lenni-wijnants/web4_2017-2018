@@ -7,15 +7,15 @@
         <ul id="blog1comments">
 
             <li class="comment">
-                <p class="naam">Lenni: </p>
+                <p class="naam">Lenni</p>
                 <p class="bericht">Uiteraard!</p>
-                <p class="rating">10/10</p>
+                <p class="rating">10</p>
             </li>
 
             <li class="comment">
-                <p class="naam">Grinch: </p>
+                <p class="naam">Grinch</p>
                 <p class="bericht">Nooit van mijn leven, spanjaard.</p>
-                <p class="rating">0/10</p>
+                <p class="rating">0</p>
             </li>
         </ul>
 

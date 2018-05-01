@@ -17,18 +17,24 @@ public class GetFriendListHandler extends AsyncHandler {
         HttpSession session = request.getSession();
         Person person = (Person) session.getAttribute("user");
 
-        // van die gebruiker vriendenlijst opvragen
+        if(person != null){
 
-        Collection<Person> friendList = person.getFriendList();
-        // vriendenlijst terug geven
 
-        Collection<Object> friendListNames = new ArrayList<>();
-        for(Person p : friendList) {
+            // van die gebruiker vriendenlijst opvragen
 
-            friendListNames.add(p.getUserId() + " (" + p.getStatus() + ")");
+            Collection<Person> friendList = person.getFriendList();
+            // vriendenlijst terug geven
+
+            Collection<Object> friendListNames = new ArrayList<>();
+            for(Person p : friendList) {
+
+                friendListNames.add(p.getUserId() + " (" + p.getStatus() + ")");
+            }
+
+            return toJSONList(friendListNames);
+
         }
 
-        return toJSONList(friendListNames);
-
+        return toJSON("friendlist", "");
     }
 }

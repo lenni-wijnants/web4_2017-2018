@@ -77,12 +77,15 @@ function getStatusData(){
         var statusParagraph = document.getElementById("tempstatus");
         var statusText = document.createTextNode(personStatus);
 
-        if(statusParagraph.childNodes[0]){
+        if(statusParagraph != null){
 
-            statusParagraph.removeChild(statusParagraph.childNodes[0])
+            if(statusParagraph.childNodes[0]){
+
+                statusParagraph.removeChild(statusParagraph.childNodes[0])
+            }
+
+            statusParagraph.appendChild(statusText);
         }
-
-        statusParagraph.appendChild(statusText);
 
         setTimeout(getStatus, 1000);
 
@@ -96,18 +99,21 @@ function getFriendListData(){
         var serverResponse = JSON.parse(xHRFriendListPoller.responseText);
         friendListUl = document.getElementById("friendList");
 
-        while (friendListUl.firstChild) {
-            friendListUl.removeChild(friendListUl.firstChild);
-        }
+        if(friendListUl != null){
 
-        for (var i = 0; i < serverResponse.length; i++) {
+            while (friendListUl.firstChild) {
+                friendListUl.removeChild(friendListUl.firstChild);
+            }
+
+            for (var i = 0; i < serverResponse.length; i++) {
 
 
-            friendListItem = document.createElement("li");
-            friendName = document.createTextNode(serverResponse[i]);
+                friendListItem = document.createElement("li");
+                friendName = document.createTextNode(serverResponse[i]);
 
-            friendListItem.appendChild(friendName);
-            friendListUl.appendChild(friendListItem);
+                friendListItem.appendChild(friendName);
+                friendListUl.appendChild(friendListItem);
+            }
         }
 
         setTimeout(getFriendList, 5000);

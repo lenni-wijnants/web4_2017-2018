@@ -19,14 +19,20 @@ public class GetStatusHandler extends AsyncHandler {
         HttpSession session = request.getSession();
         Person person = (Person) session.getAttribute("user");
 
-        // van die gebruiker status en vriendenlijst opvragen
+        if(person != null){
 
-        String status = person.getStatus();
 
-        // status terug geven
+            // van die gebruiker status en vriendenlijst opvragen
 
-        return toJSON("status", status);
+            String status = person.getStatus();
 
+            // status terug geven
+
+            return toJSON("status", status);
+
+        }
+
+        return toJSON("status", "Offline");
     }
 
 
