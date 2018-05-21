@@ -1,0 +1,116 @@
+#blog {
+
+    display:grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-gap:10px;
+}
+
+#blog > * {
+    justify-self: start;
+}
+
+#blog > li > p {
+
+    font-weight: bold;
+    font-size:20px;
+}
+
+#blog > li > form {
+
+    display:grid;
+    grid-template-columns: 200px;
+    grid-template-rows: auto;
+    grid-gap: 5px;
+    padding-left: 55px;
+    padding-top: 20px;
+}
+
+#blog > li > form > * {
+
+    width: 100%;
+}
+
+#blog > li > form > input[type=submit] {
+
+    width: 50%;
+}
+
+.rating {
+
+    font-style: italic;
+    color: #444477;
+}
+
+.comment {
+
+    border-bottom: 1px solid black;
+}
+
+#chatcanvas{
+
+    border: 2px solid black;
+    padding: 5px;
+    font-family: "Courier New", serif;
+    height: 20rem;
+    overflow-y: scroll;
+
+}
+
+#chatcanvas > p{
+
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#chatcanvas > p > span {
+
+    font-weight: bold;
+}
+
+#chatbutton{
+
+    margin-left: 0;
+}
+
+#friendselector{
+
+    width: 10rem;
+}
+
+#chatmessage{
+    width: 20rem;
+}
+
+#chatcontainer > table{
+
+    margin-top: 1rem;
+}
+
+#chatcontrols{
+
+    margin-top: 1rem;
+}
+
+#logoutbutton{
+
+    margin-left: 0;
+}
+
+#friendList{
+
+    margin-left: 0;
+}
+
+#Toggler{
+
+    border: 1px solid black;
+    display:block;
+    width: 20rem;
+    text-align:center;
+}
+
+#Toggler:hover{
+    background-color: black;
+    color: white;
+}
